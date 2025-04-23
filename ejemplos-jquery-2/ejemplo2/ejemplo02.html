@@ -15,18 +15,19 @@
   <script>
     $(document).ready(function() {
       var url = "https://pkgstore.datahub.io/core/continent-codes/continent-codes_json/data/60d6baef1250bc2b01fd0148dccca518/continent-codes_json.json";
+
       $( "button" ).click(function() {
             $.ajax({
               dataType: 'json',
-              url: url 
+              url: url
             }).then(function(data) {
-              
+
               for(var i=0; i<data.length; i++){
                 console.log(data[i]);
                 console.log(data[i].Code);
                 console.log(data[i].Name);
               }
-            })      
+            })
       });
     });
   </script>
